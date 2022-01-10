@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;SpringBoot2JPAManyToMany&apos; to &apos;SpringBoot2dataJPAManyToMany&apos;&#x0D;&#x0A;- Original element: &apos;SpringBoot2JPAManyToMany&apos;&#x0D;&#x0A;- Renamed element: &apos;SpringBoot2JPAManyToMany&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;SpringBoot2JPAManyToMany&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=SpringBoot2JPAManyToMany" name="SpringBoot2dataJPAManyToMany" references="true" stamp="1616605265346" version="1.0"/>
+</session>

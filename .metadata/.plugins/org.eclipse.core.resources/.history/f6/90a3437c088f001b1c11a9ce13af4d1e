@@ -1,0 +1,20 @@
+package in.nareshit.raghu.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import in.nareshit.raghu.model.Employee;
+
+public interface EmployeeRepository 
+	extends JpaRepository<Employee, Integer> {
+
+	//@Query("SELECT e.empName , d.deptCode  FROM Employee e INNER JOIN e.dob AS d")
+	//@Query("SELECT e.empName , d.deptCode  FROM Employee e LEFT JOIN e.dob AS d")
+	@Query("SELECT e.empName , d.deptCode  FROM Employee e RIGHT JOIN e.dob AS d")
+	List<Object[]> getEmpDeptInnerJoinData();
+	
+	@Query("SELECT e.empName , d.deptCode  FROM Employee e INNER JOIN e.dob AS d WHERE e.empSal>:empSal")
+	List<Object[]> getEmpDeptInnerJoinData2(Double empSal);
+}

@@ -1,0 +1,70 @@
+package in.nareshit.raghu.Runner;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.stereotype.Component;
+
+import in.nareshit.raghu.model.Student;
+import in.nareshit.raghu.repository.StudentRepository;
+
+@Component
+public class BookRepoRunner  implements CommandLineRunner {
+	
+	@Autowired
+	private StudentRepository repo;
+
+	@Override
+	public void run(String... args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		repo.save(new Student(101, "SYED", 580.0));
+		repo.save(new Student(102, "AMRIT", 480.0));
+		repo.save(new Student(103, "ANIL", 600.0));
+		repo.save(new Student(104, "SAM", 320.0));
+		repo.save(new Student(105, "ABC", 800.0));
+		repo.save(new Student(106, "XYZ", 900.0));
+		repo.save(new Student(107, "MNO", 500.0));
+		repo.save(new Student(108, "XYZ", 500.0));
+		repo.save(new Student(109, "MTY", 600.0));
+		repo.save(new Student(110, "IUJ", 700.0));
+		repo.save(new Student(111, "NJI", 800.0));
+		
+		//Input (pageable) = number, size
+		//Pageable pageable= PageRequest.of(333, 5);
+		//Pageable pageable= PageRequest.of(page, size, sort)
+		
+		//Pageable pageable = PageRequest.of(1, 5,Sort.by("stdName","stdId"));
+		//Pageable pageable = PageRequest.of(1, 5,Sort.by(Order.asc("stdName"),Order.desc("stdId")));
+		Pageable pageable = PageRequest.of(2, 5,Sort.by(Direction.DESC,"stdName","stdId"));
+		//execute query
+		Page<Student> page =  repo.findAll(pageable);
+		
+		 //print output
+	   List<Student> data=	page.getContent();
+       data.forEach(System.out::println);
+       
+		//meta data
+		System.out.println(" Is Empty Page? " + page.isEmpty());
+		System.out.println(" Is First Page? " + page.isFirst());
+		System.out.println(" Is Last Page? " +page.isLast());
+		System.out.println(" Next Page? " +page.hasNext());
+		System.out.println(" Previous Page? " +page.hasPrevious());
+		System.out.println(" Total Pages? " +page.getTotalPages());
+		System.out.println(" Current Page Number? " +page.getNumber());
+		System.out.println(" Page Size? " + page.getSize());
+
+	   
+	   
+	  
+
+		
+	}
+
+}

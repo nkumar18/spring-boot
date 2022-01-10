@@ -1,0 +1,28 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+<body>
+<h3>Employee Edit Form</h3>
+<form th:action="@{/employee/update}" 
+	method="POST" th:object="${employee}">
+<pre>
+Employee Id : <input type="text" th:field="*{empId}"/>
+EmployeeName:  <input type="text" th:field="*{empName}"/>
+Employee Gender:
+		<input type="radio" th:field="*{empGen}" value="Male"/> Male
+		<input type="radio" th:field="*{empGen}" value="Female"/> Female
+Employee Department:
+		<select th:field="*{empDept}">
+			<option value="">-SELECT-</option>
+			<option th:each="ob:${map}" 
+				th:value="${ob.key}"
+				th:text="${ob.value}"
+			></option>
+		</select>
+Employee Languages:
+	<input type="checkbox" th:field="*{empLangs}" th:each="ob:${langs}" th:value="${ob.key}" th:text="${ob.value}"/>
+		
+	<input type="submit" value="Update Employee"/>
+</pre>	
+</form>
+</body>
+</html>
+

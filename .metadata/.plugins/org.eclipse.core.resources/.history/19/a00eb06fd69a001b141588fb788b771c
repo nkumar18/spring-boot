@@ -1,0 +1,13 @@
+<html>
+<body>
+<h2>Student Register Form</h2>
+<form action="save" method="POST">
+<pre>
+ID   : <input type="text" name="stdId"/>
+NAME : <input type="text" name="stdName"/>
+FEE  : <input type="text" name="stdFee"/>
+	<input type="submit" value="Add Student"/>
+</pre>
+</form>
+</body>
+</html>

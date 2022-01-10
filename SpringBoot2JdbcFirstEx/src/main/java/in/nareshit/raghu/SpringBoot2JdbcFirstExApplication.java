@@ -1,0 +1,14 @@
+
+package in.nareshit.raghu;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringBoot2JdbcFirstExApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBoot2JdbcFirstExApplication.class, args);
+	}
+
+}

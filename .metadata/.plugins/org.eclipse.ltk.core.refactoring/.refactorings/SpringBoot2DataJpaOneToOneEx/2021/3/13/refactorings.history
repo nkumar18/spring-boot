@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;DataFetchRunner.java&apos; to &apos;SpringBoot2dataJPAOnetoOne/src/main/java/in.nareshit.raghu.Runner&apos;&#x0D;&#x0A;- Original project: &apos;SpringBoot2DataJpaOneToOneEx&apos;&#x0D;&#x0A;- Destination element: &apos;SpringBoot2dataJPAOnetoOne/src/main/java/in.nareshit.raghu.Runner&apos;&#x0D;&#x0A;- Original element: &apos;in.nareshit.raghu.runner.DataFetchRunner.java&apos;" description="Copy compilation unit" destination="=SpringBoot2dataJPAOnetoOne/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.nareshit.raghu.Runner" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.nareshit.raghu.runner{DataFetchRunner.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1616847052302" units="1" version="1.0"/>
+</session>

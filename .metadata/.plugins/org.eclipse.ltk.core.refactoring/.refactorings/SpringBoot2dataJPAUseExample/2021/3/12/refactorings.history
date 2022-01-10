@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;in.nareshit.raghu.model.Student.java&apos; to &apos;Book.java&apos;&#x0D;&#x0A;- Original project: &apos;SpringBoot2dataJPAUseExample&apos;&#x0D;&#x0A;- Original element: &apos;in.nareshit.raghu.model.Student.java&apos;&#x0D;&#x0A;- Renamed element: &apos;in.nareshit.raghu.model.Book.java&apos;" description="Rename compilation unit &apos;Student.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.nareshit.raghu.model{Student.java" name="Book.java" references="false" stamp="1615890458377" version="1.0"/>
+</session>

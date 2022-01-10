@@ -1,0 +1,6 @@
+StagingView_CompareMode=false
+StagingView_ShowNewCommits=true
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>add first proj</message>\r\n<message>add first project</message>\r\n<message>springboot with jwt</message>\r\n<message>Springbootmvc to save register form data</message>\r\n<message>sending data from controller to UI</message>\r\n<message>SpringProfiles include</message>\r\n<message>DataJPA</message>\r\n<message>DataJPA Association</message>\r\n<message>First commit</message>\r\n</messages>
+eclipse.preferences.version=1
+resourcehistory_graph_split=500,500
+resourcehistory_rev_split=700,300

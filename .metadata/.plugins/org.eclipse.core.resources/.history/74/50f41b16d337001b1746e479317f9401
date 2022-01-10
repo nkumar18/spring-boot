@@ -1,0 +1,34 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+
+@SpringBootApplication
+public class FirstdemowebappApplication implements CommandLineRunner {
+
+	public static void main(String[] args) {
+		//1.Way to instayiate SpringApplication
+//		SpringApplication.run(FirstdemowebappApplication.class, args);
+		
+		//2.Way to instayiate SpringApplication using IOC Contexts
+		/*SpringApplication app = new SpringApplication(FirstdemowebappApplication.class);
+				app.setBannerMode(Mode.OFF);
+				app.run(args);*/
+		SpringApplicationBuilder sab=new SpringApplicationBuilder(FirstdemowebappApplication.class) ;
+		sab.run(args);
+	}
+    
+	@Autowired
+	EmployeeRepo empRepo;
+	@Override
+	public void run(String... args) throws Exception {
+		// anything which you want just after  initialising container
+		empRepo.save(new Employee(101, "Ram", 1000));
+		empRepo.save(new Employee(102, "shayam", 2000));
+		empRepo.save(new Employee(103, "Hari", 3000));
+		empRepo.save(new Employee(104, "Govind", 4000));
+	}
+
+}

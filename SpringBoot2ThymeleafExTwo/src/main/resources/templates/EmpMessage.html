@@ -1,0 +1,25 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+<body>
+<h3>FROM MESSAGES PAGE!!</h3>
+<h2 th:text="${title}"></h2>
+
+ID    : <span th:text="${eob.empId}"></span>
+NAME  : <span th:text="${eob.empName}"></span>
+SAL   : <span th:text="${eob.empSal}"></span>
+<br/>
+<table border="1">
+	<tr>
+		<th>ID</th>
+		<th>NAME</th>
+		<th>SAL</th>
+	</tr>
+	<!-- for(Employee ob:list) {} -->
+	<tr th:each="ob:${list}">
+		<td th:text="${ob.empId}"></td>
+		<td th:text="${ob.empName}"></td>
+		<td th:text="${ob.empSal}"></td>
+	</tr>
+</table>
+
+</body>
+</html>
